@@ -78,6 +78,12 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-1
 
+1. Sebenarnya, perlu atau tidaknya traits tergantung pada kebutuhan observer. Jika observer memiliki banyak tipe dan menginginkan sistem yang dapat diperluas untuk integrasi, maka penggunaan traits merupakan opsi yang benar. Akan tetapi jika observer hanya memiliki satu class (seperti pada bambangshop yaitu subscriber), maka tidak diperlukan penerapan traits
+
+2. Penggunaan `DashMap` lebih disarankan karena lebih efisien dan memakan waktu yang relatif lebih cepat untuk pemetaan. Jika menggunakan vec, perlu adanya pemisahan antara vec url dan vec subscriber yang mengakibatkan pengaksesan data relatif lebih sulit dan kurang efisien
+
+3. Penerapan `singleton` bertujuan untuk membatasi bahwa sebuah program berjalan pada 1 instance. Akan tetapi menurut saya penerapan `DashMap` sudah cukup untuk menyimpan subscriber pada Rust. Penerapan `Singleton` dapat menjadi alternatif lain
+
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3
