@@ -65,11 +65,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement unsubscribe function in Notification controller.`
     -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
-    -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
-    -   [ ] Commit: `Implement publish function in Program service and Program controller.`
-    -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [x] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
+    -   [x] Commit: `Implement publish function in Program service and Program controller.`
+    -   [x] Commit: `Edit Product service methods to call notify after create/delete.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -93,3 +93,11 @@ This is the place for you to write reflections:
 3. Sejujurnya saya belum explore lebih jauh mengenai postman kecuali pada materi perkuliahan. Akan tetapi, saya berpendapat bahwa tools ini sangat membantu saya untuk memastikan bahwa program memberikan respon kepada saya dengan semestinya. Mungkin fitur yang saya rasa berguna adalah terdapat history pada postman sehingga saya tidak perlu menulis ulang requestnya.
 
 #### Reflection Publisher-3
+
+1. Tutorial ini menerapkan model push dari observer pattern. Ketika program melakukan create, delete, dan update pada modul objek, notifikasi akan memanggil metode dan memberikan pembaruan pada tiap subscriber
+
+2. `KELEBIHAN` : Dapat meminta data saat membutuhkan saja dan mengurangi keterkaitan antar objek
+
+`KEKURANGAN` : Kompleksitas meningkat dan permintaan harus dilakukan secara berkala agar mendapatkan informasi yang terbaru
+
+3. Tanpa multi-thread, proses notifikasi berpotensi untuk tertunda dikarenakan harus menunggu pengirimian notifikasi berurutan 1 per 1. Selain itu, jika proses notifikasi ada yang tidak berjalan, maka keseluruhan aplikasi berpotensi untuk tidak responsif
